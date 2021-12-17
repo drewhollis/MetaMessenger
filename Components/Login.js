@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useMoralis } from "react-moralis";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
-import avatar from "../public/images/meta-dog-nft.png";
+import avatar from "../public/images/metamessenger-logo.jpeg";
 import background from "../public/images/metaverse-background.jpeg";
 
 function Login() {
