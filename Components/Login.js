@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
+import avatar from "../public/images/meta-dog-nft.png";
+import background from "../public/images/metaverse-background.jpeg";
 
 function Login() {
   const { authenticate } = useMoralis();
@@ -10,7 +12,7 @@ function Login() {
         {/* logo */}
         <Image
           className="object-cover rounded-full"
-          src="https://nyweekly.com/wp-content/uploads/2021/11/15-3.png"
+          src={avatar}
           height={200}
           width={200}
         />
@@ -18,18 +20,14 @@ function Login() {
         {/* login button */}
         <button
           onClick={authenticate}
-          className="bg-yellow-500 rounded-lg p-5 font-bold animate-pulse"
+          className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg p-5 font-bold animate-pulse"
         >
           Enter The METAVERSE
         </button>
       </div>
 
       <div className="w-full h-screen">
-        <Image
-          src="https://links.papareact.com/55n"
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src={background} layout="fill" objectFit="cover" />
       </div>
     </div>
   );
