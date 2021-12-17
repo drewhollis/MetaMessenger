@@ -1,15 +1,34 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
+import { useEffect, useRef } from "react";
+import { init } from "ityped";
 import avatar from "../public/images/meta-dog-nft.png";
 import background from "../public/images/metaverse-background.jpeg";
 
 function Login() {
   const { authenticate } = useMoralis();
+
+  const textRef = useRef();
+
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 60,
+      strings: ["Meta Messenger", "Web 3.0 Messaging"],
+    });
+  }, []);
+
   return (
-    <div className="bg-black relative">
-      <h1>Login Screen</h1>
+    <div className="">
+      <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center space-y-4"></div>
+      <div className="flex flex-col absolute z-50 h-1/6 w-full items-center justify-center">
+        <h1 className="font-mono text-4xl text-white">
+          <span ref={textRef}></span>
+        </h1>
+      </div>
+      {/* logo */}
       <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center space-y-4">
-        {/* logo */}
         <Image
           className="object-cover rounded-full"
           src={avatar}
