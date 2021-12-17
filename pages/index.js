@@ -15,7 +15,7 @@ export default function Home() {
       <h1>Welcome to MetaMessenger</h1>
       <button
         onClick={logout}
-        className="bg-yellow-500 rounded-lg p-5 font-bold"
+        className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg p-5 font-bold"
       >
         Logout
       </button>

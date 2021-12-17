@@ -26,7 +26,7 @@ function Login() {
         </button>
       </div>
 
-      <div className="w-full h-screen">
+      <div className="w-full h-screen z-10">
         <Image src={background} layout="fill" objectFit="cover" />
       </div>
     </div>
